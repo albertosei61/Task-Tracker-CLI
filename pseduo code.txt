@@ -1,0 +1,32 @@
+####Adding Task
+ Set class Tasks(self, task=None)
+  to handle add, update, and delete functions
+  def add_task(self):
+    get user input 
+        take the input and read it into a json file.
+            set a property of id when reading into the file -- need to make this unique -- using randint now
+            stop json file from overwriting itself -- done
+            
+            json file has end of file expected error:
+                so if the file path exists
+                    read existing task to file
+                        if it doesnt exist then append the task to the dictionary
+                            write updated tasks back to the file.
+
+
+
+
+    the "buy groceries" string will get the following properties
+    id: A unique identifier for the task
+        Can be handled later --- description: A short description of the task
+        Can be handled later --- status: The status of the task (todo, in-progress, done)
+    createdAt: The date and time when the task was created
+        Can be handled later --- updatedAt: The date and time when the task was last updated
+ 
+
+
+ ---------
+  cli function will invoke a cli command to add Task from def add() function
+    invoke function at the end
+
+when command task-cli add "Buy groceries" is given
