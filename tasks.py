@@ -11,7 +11,7 @@ class Tasks:
 
     def add_task(self):
         self.task = input("Enter task: ")
-        print("Task entered is", self.task)
+        
         
         rand = random.randrange(1, 100)
         #rand_final = jsonpickle.encode(random_number)
@@ -21,12 +21,19 @@ class Tasks:
             "id": rand,
             "name": self.task
         }
-        
+
+
         json_object = json.dumps(dictionary, indent=4)
         json_file_path = os.path.join("json_sources", "tasks.json")
+
+        os.makedirs(os.path.dirname(json_file_path), exist_ok=True)
+
         with open(json_file_path, "a") as file:
-            file.write(json_object)
+            file.write(json_object + "\n")
 
 
-p1 = Tasks()
-p1.add_task()
+if __name__ == "__main__":
+
+    p1 = Tasks()
+    p1.add_task()
+    print("Task entered is", p1.task)

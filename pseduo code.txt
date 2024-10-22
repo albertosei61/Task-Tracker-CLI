@@ -9,11 +9,9 @@
             
             json file has end of file expected error:
                 so if the file path exists
-                    read existing task to file
+                    read existing tasks to file to a new file.
                         if it doesnt exist then append the task to the dictionary
                             write updated tasks back to the file.
-
-
 
 
     the "buy groceries" string will get the following properties
@@ -29,4 +27,10 @@
   cli function will invoke a cli command to add Task from def add() function
     invoke function at the end
 
-when command task-cli add "Buy groceries" is given
+create a function that when cli.py is run 
+python cli.py add "Make bed"
+    add will invoke add_task function
+    func = task.py()
+    use func to set it to s
+        and string "Make bed will" replace the input variable
+
